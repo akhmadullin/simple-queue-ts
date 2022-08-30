@@ -1,0 +1,17 @@
+name: test
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - uses: actions/setup-node@v3.2.0
+        with:
+          node-version: 16
+          cache: yarn
+      - run: yarn install
+      - run: yarn test --bail --ci
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3.1.0

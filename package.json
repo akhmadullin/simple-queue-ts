@@ -1,0 +1,50 @@
+{
+  "name": "simple-queue-ts",
+  "version": "1.0.0",
+  "description": "Simple Queue written in TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "lint": "eslint",
+    "lint:all": "TIMING=1 npm run lint \"**/*.{js,ts}\"",
+    "format": "prettier --config .prettierrc --write",
+    "format:all": "npm run format \"**/*.{js,ts}\"",
+    "test": "jest --config jestconfig.json",
+    "build": "rm -rf lib && tsc --project tsconfig.build.json",
+    "prepublish": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akhmadullin/simple-queue-ts.git"
+  },
+  "keywords": [
+    "queue",
+    "typescript",
+    "simple queue",
+    "typescript queue"
+  ],
+  "author": "Roman Akhmadullin <akhmadullin_roman@mail.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akhmadullin/simple-queue-ts/issues"
+  },
+  "homepage": "https://github.com/akhmadullin/simple-queue-ts#readme",
+  "devDependencies": {
+    "@types/jest": "^29.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.3",
+    "prettier": "^2.4.1",
+    "ts-jest": "^28.0.8",
+    "typescript": "4.3"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "packageManager": "yarn@3.2.3"
+}
