@@ -34,6 +34,19 @@ const usersQueue = new Queue<User>();
 usersQueue.enqueue({ name: 'Jack', age: 42 });
 ```
 
+## API
+
+Queue is generic class. You can define items type by passing some `T` type during class instance creation:
+```ts
+const queue = new Queue<T>();
+```
+
+| Method | Type | Description |
+| - | - | - |
+| `enqueue` | (item: T) => void | Adds item to the queue|
+| `dequeue` | () => T or undefined | Returns first item from the queue. If queue is empty, method will return undefined|
+| `isEmpty` | () => boolean | Returns boolean: is queue empty or not|
+
 ## License
 
 MIT
